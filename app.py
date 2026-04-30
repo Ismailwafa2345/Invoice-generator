@@ -1,6 +1,5 @@
 import streamlit as st
 from datetime import date, timedelta
-import anthropic
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(

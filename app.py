@@ -558,6 +558,7 @@ with left_col:
     for i, item in enumerate(st.session_state["items"]):
     ic1, ic2, ic3, ic4 = st.columns([3, 1, 1.5, 0.6])
     with ic1:
+        pass
             new_desc = st.text_input(
                 "desc", value=item["desc"],
                 placeholder=T("ph_desc"),

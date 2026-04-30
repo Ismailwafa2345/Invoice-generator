@@ -548,7 +548,6 @@ with left_col:
 
     # ── Services / Items ──
     st.markdown(f"<span class='slabel'>{T('services')}</span>", unsafe_allow_html=True)
-
     # Header row
     hc1, hc2, hc3, hc4 = st.columns([3, 1, 1.5, 0.6])
     hc1.markdown(f"<div style='font-size:10px;color:#666;font-weight:600;text-transform:uppercase'>{T('desc')}</div>", unsafe_allow_html=True)
@@ -556,23 +555,19 @@ with left_col:
     hc3.markdown(f"<div style='font-size:10px;color:#666;font-weight:600;text-transform:uppercase'>{T('rate')}</div>", unsafe_allow_html=True)
 
     items_to_delete = []
-for i, item in enumerate(st.session_state["items"]):
+    for i, item in enumerate(st.session_state["items"]):
     ic1, ic2, ic3, ic4 = st.columns([3, 1, 1.5, 0.6])
     with ic1:
             new_desc = st.text_input(
                 "desc", value=item["desc"],
                 placeholder=T("ph_desc"),
                 label_visibility="collapsed",
-                key=f"item_desc_{i}"
-            )
+                key=f"item_desc_{i}" )
           items_to_delete = []
-
 for i, item in enumerate(st.session_state["items"]):
     ic1, ic2, ic3, ic4 = st.columns([3, 1, 1.5, 0.6])
-
-    with ic1:
+with ic1:
         st.session_state["items"][i]["desc"] = new_desc
-
     with ic2:
         pass
             new_qty = st.number_input(

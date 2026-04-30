@@ -573,6 +573,7 @@ for i, item in enumerate(st.session_state["items"]):
 with ic1:
         st.session_state["items"][i]["desc"] = new_desc
     with ic2:
+        
         pass
             new_qty = st.number_input(
                 "qty", value=float(item["qty"]),

@@ -560,7 +560,8 @@ for i, item in enumerate(st.session_state["items"]):
 
     with ic1:
         st.write(item)
-            new_desc = st.text_input(
+           
+        new_desc = st.text_input(
                 "desc", value=item["desc"],
                 placeholder=T("ph_desc"),
                 label_visibility="collapsed",

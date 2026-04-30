@@ -565,7 +565,16 @@ for i, item in enumerate(st.session_state["items"]):
                 label_visibility="collapsed",
                 key=f"item_desc_{i}"
             )
-          st.session_state["items"][i]["desc"] = new_desc
+          items_to_delete = []
+
+for i, item in enumerate(st.session_state["items"]):
+    ic1, ic2, ic3, ic4 = st.columns([3, 1, 1.5, 0.6])
+
+    with ic1:
+        st.session_state["items"][i]["desc"] = new_desc
+
+    with ic2:
+        pass
             new_qty = st.number_input(
                 "qty", value=float(item["qty"]),
                 min_value=0.0, step=1.0,

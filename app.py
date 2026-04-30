@@ -565,8 +565,7 @@ for i, item in enumerate(st.session_state["items"]):
                 label_visibility="collapsed",
                 key=f"item_desc_{i}"
             )
-            st.session_state.items[i]["desc"] = new_desc
-        with ic2:
+          st.session_state["items"][i]["desc"] = new_desc
             new_qty = st.number_input(
                 "qty", value=float(item["qty"]),
                 min_value=0.0, step=1.0,

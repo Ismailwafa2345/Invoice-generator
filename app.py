@@ -554,7 +554,6 @@ with left_col:
     hc2.markdown(f"<div style='font-size:10px;color:#666;font-weight:600;text-transform:uppercase'>{T('qty')}</div>", unsafe_allow_html=True)
     hc3.markdown(f"<div style='font-size:10px;color:#666;font-weight:600;text-transform:uppercase'>{T('rate')}</div>", unsafe_allow_html=True)
   items_to_delete = []
-
 for i, item in enumerate(st.session_state["items"]):
     ic1, ic2, ic3, ic4 = st.columns([3, 1, 1.5, 0.6])
     with ic1:

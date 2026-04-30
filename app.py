@@ -566,7 +566,8 @@ for i, item in enumerate(st.session_state["items"]):
                 placeholder=T("ph_desc"),
                 label_visibility="collapsed",
                 key=f"item_desc_{i}" )
-          items_to_delete = []
+      
+        items_to_delete = []
 for i, item in enumerate(st.session_state["items"]):
     ic1, ic2, ic3, ic4 = st.columns([3, 1, 1.5, 0.6])
 with ic1:
